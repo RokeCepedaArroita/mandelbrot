@@ -30,7 +30,7 @@ start_frame = 0
 initial_dpix = np.copy(coordinates['dpix']) # initial pixel size
 zoom_factor = 0.994296 # zoom to apply to each frame
 folder_name = 'my_animation'
-check_video = False # set to True to compute only 10 evenly spaced frames
+keyframes_only = False # set to True to compute only 10 evenly spaced frames
 
 # Start MPI
 from mpi4py import MPI
@@ -45,8 +45,8 @@ if rank==0:
         print(f'Creating video directory "{folder_name}" since it does not exist.',flush=True)
         os.makedirs(f'./{folder_name}')
 
-# If check video mode check only a number of evenly spaced keyframes
-if check_video:
+# If testing only check a number of evenly spaced keyframes
+if keyframes_only:
     N_keyframes = 20
     framelist = list(range(0, nframes+1, nframes//(N_keyframes-1)))[:N_keyframes] if N_keyframes > 0 else [0]
     nframes = np.shape(framelist)[0]

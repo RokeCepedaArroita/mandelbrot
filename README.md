@@ -44,8 +44,8 @@ To use the demo:
 
 $$ F_{z} = \left ( \frac{Z_{\mathrm{min}}}{Z_{\mathrm{max}}} \right )^{1/N_\mathrm{frames}} $$
 
-3. Run your animation. The frames will be saved to the folder specified.
-4. Turn the frames into a video using `animate.py`. Make sure the resolution matches the resolution of the images.
+3. Run your animation. You can first test the results by computing only a number of evenly spaced keyframes by setting `keyframes_only = True`. The frames will be saved to the folder specified.
+4. Turn the frames into a video using `animate.py`. Make sure the resolution parameter matches the resolution of the images.
 
 ## Code
 
