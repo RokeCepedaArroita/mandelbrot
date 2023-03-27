@@ -15,8 +15,6 @@ coordinates = {'resolution': [3840, 2160], # 3840, 2160
                'centre': [-0.74364388703715, 0.131825904205330],
                'dpix': 1.3e-3} # start 1.3e-3, limit 5e-17
 
-
-
 # Create a custom color map
 from matplotlib import colors
 my_colours = [(0.0, 0.0, 0.0),    # black
@@ -32,6 +30,7 @@ cmap = colors.LinearSegmentedColormap.from_list('mycmap', my_colours)
 # Create video: for 3 min 30 fps need 5400 frames, have 2.6*10^13 orders
 # of magnitude to cover, so it will take around 45 hours on my laptop.
 nframes = 5400
+start_frame = 0
 initial_zoom = 1.3e-3
 zoom_factor = 0.994296 # 60 fps = 0.997144
 folder_name = 'video'
@@ -52,10 +51,10 @@ if rank==0:
 # Initialize the tqdm progress bar on rank 0
 from tqdm import tqdm
 if rank == 0:
-    progress_bar = tqdm(total=nframes)
+    progress_bar = tqdm(total=nframes-start_frame)
 
 # Loop through every frame
-for frame in range(nframes):
+for frame in range(start_frame, nframes):
     '''
     Assign the right task to each thread. If the node is
     correct loop continues. If it is not correct then the
@@ -97,4 +96,4 @@ for frame in range(nframes):
 
     # Update the tqdm progress bar on rank 0
     if rank == 0:
-        progress_bar.update(1)
+        progress_bar.update(1*size)
