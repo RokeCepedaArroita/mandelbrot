@@ -44,7 +44,7 @@ To use the demo:
 $$ F_{z} = \left ( \frac{Z_{\mathrm{min}}}{Z_{\mathrm{max}}} \right )^{1/N_\mathrm{frames}} $$
 
 3. Run your animation. The frames will be saved to the folder specified.
-4. Turn the frames into a video using `animate.py`.
+4. Turn the frames into a video using `animate.py`. Make sure the resolution matches the resolution of the images.
 
 ## Code
 
