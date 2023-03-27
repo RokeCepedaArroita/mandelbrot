@@ -6,10 +6,10 @@ frame_dir = './video'
 video_name = 'mandelbrot_animation'
 
 # Set the frame rate of the output video
-fps = 30
+fps = 60
 
 # Define the codec for the output video (can be changed based on the desired output format)
-fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+fourcc = cv2.VideoWriter_fourcc(*'H264')
 
 # Set the size of the output video (must match the size of your frames)
 frame_size = (3840, 2160)

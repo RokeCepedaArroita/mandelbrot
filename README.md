@@ -20,8 +20,9 @@ where $z_n$ is a complex number and $c$ is a constant complex number that varies
 - Able to zoom over 13 orders of magnitude
 - TQDM progress bar
 - Adjust the maximum iteration count
-- Change the colour scheme
+- Change the colour scheme with built-in colour scales
 - Start on a specific frame
+- Preview the video by only computing a number of keyframes
 - Ouput folder parameter
 
 ## Installation
@@ -53,6 +54,7 @@ The code for this demo is written in Python and uses the Cython and MPI librarie
 - `mandelbrot.py`: The main script that generates the frames and handles user input.
 - `mandelbrot.pyx`: Contains the code for computing the fractal.
 - `setup.py`: Contains the setup code for compiling the Cython code.
+- `colour_scales.py`: Contains two custom colour scales. You can add your own here.
 - `animate.py`: Contains the script to animate the frames and save them as a video.
 
 ## Examples
