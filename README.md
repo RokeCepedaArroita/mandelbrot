@@ -36,7 +36,7 @@ To install and run the demo, follow these steps:
 
 ## Usage
 
-To use the demo, follow these steps:
+To use the demo:
 
 1. Choose your resolution, maximum number of iterations, central coordinates, and the number of frames for your animation. You can set the number of frames to 1 for this exploration phase.
 2. Establish the minimum and maximum zoom levels (i.e. `coordinates['dpix']`), then compute the linear zoom in factor $F_{z}$ as follows:
