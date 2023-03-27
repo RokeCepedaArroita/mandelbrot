@@ -1,8 +1,8 @@
 # Mandelbrot Set Demo
 
-This is a demo of the Mandelbrot set implemented using Cython (x40 speedup) and MPI to create an zooming animation. The demo allows you to create animations to explore different regions of the set and adjust various parameters such as the maximum iteration count, colour scheme, frame resolution, etc.
+This is a demo of the Mandelbrot set implemented using Cython (x40 speedup) and MPI to create an zooming animation. The demo allows you to create animations to explore different regions of the spanning over 13 orders of magnitude and adjust various parameters such as the maximum iteration count, colour scheme, frame resolution, etc.
 
-![Mandelbrot Set Demo](placeholder_image.png)
+![Mandelbrot Set Demo](./examples/mandelbrot_f2438.png)
 
 ## Equation
 
@@ -41,7 +41,7 @@ To use the demo, follow these steps:
 1. Choose your resolution, maximum number of iterations, central coordinates, and the number of frames for your animation. You can set the number of frames to 1 for this exploration phase.
 2. Establish the minimum and maximum zoom levels (i.e. `coordinates['dpix']`), then compute the linear zoom in factor $F_{z}$ as follows:
 
-$$ F_{z} = \left ( \frac{Z_{\mathrm{min}}}{Z_{\mathrm{max}}} \right )^{1/N_\mathrm{frames}} $$.
+$$ F_{z} = \left ( \frac{Z_{\mathrm{min}}}{Z_{\mathrm{max}}} \right )^{1/N_\mathrm{frames}} $$
 
 3. Run your animation. The frames will be saved to the folder specified.
 4. Turn the frames into a video using `animate.py`.

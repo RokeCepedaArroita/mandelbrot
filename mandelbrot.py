@@ -8,7 +8,7 @@ import mandelbrot
 import matplotlib.pyplot as plt
 
 # Maximum number of iterations
-maxiter = 5000 # 3000 saturates the last frame
+maxiter = 3000 # 3000 saturates the last frame but gives better dynamic range midway through
 
 # Resolution, centre and pixel size
 coordinates = {'resolution': [3840, 2160], # 3840, 2160
@@ -30,8 +30,8 @@ cmap = colors.LinearSegmentedColormap.from_list('mycmap', my_colours)
 # Create video: for 3 min 30 fps need 5400 frames, have 2.6*10^13 orders
 # of magnitude to cover, so it will take around 45 hours on my laptop.
 nframes = 1 # 5400
-start_frame = 0
-initial_zoom = 1.3e-10 # 1.3e-3
+start_frame = 2438
+initial_zoom = 1.3e-3 # 1.3e-3
 zoom_factor = 0.994296 # 60 fps = 0.997144
 folder_name = 'video'
 
@@ -51,10 +51,10 @@ if rank==0:
 # Initialize the tqdm progress bar on rank 0
 from tqdm import tqdm
 if rank == 0:
-    progress_bar = tqdm(total=nframes-start_frame)
+    progress_bar = tqdm(total=nframes)
 
 # Loop through every frame
-for frame in range(start_frame, nframes):
+for frame in range(start_frame, start_frame+nframes):
     '''
     Assign the right task to each thread. If the node is
     correct loop continues. If it is not correct then the
