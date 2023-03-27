@@ -29,9 +29,9 @@ cmap = colors.LinearSegmentedColormap.from_list('mycmap', my_colours)
 
 # Create video: for 3 min 30 fps need 5400 frames, have 2.6*10^13 orders
 # of magnitude to cover, so it will take around 45 hours on my laptop.
-nframes = 5400
+nframes = 1 # 5400
 start_frame = 0
-initial_zoom = 1.3e-3
+initial_zoom = 1.3e-10 # 1.3e-3
 zoom_factor = 0.994296 # 60 fps = 0.997144
 folder_name = 'video'
 
