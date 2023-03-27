@@ -1,6 +1,6 @@
 # Mandelbrot Set Demo
 
-This is a demo of the Mandelbrot set implemented using Cython (x40 speedup) and MPI to create an zooming animation. The demo allows you to create animations to explore different regions of the spanning over 13 orders of magnitude and adjust various parameters such as the maximum iteration count, colour scheme, frame resolution, etc.
+This is a demo of the Mandelbrot set implemented using Cython (roughly x40 speedup) and MPI to create an zooming animation. The demo allows you to create animations to explore different regions of the spanning over 13 orders of magnitude and adjust various parameters such as the maximum iteration count, colour scheme, frame resolution, etc.
 
 ![Mandelbrot Set Demo](./examples/mandelbrot_f2438.png)
 
@@ -29,7 +29,7 @@ where $z_n$ is a complex number and $c$ is a constant complex number that varies
 To install and run the demo, follow these steps:
 
 1. Clone the repository to your local machine
-2. Install the required dependencies (Cython,)
+2. Install the required dependencies (Cython, mpi4py, opencv, tqdm). You might have to run `pip install opencv-python` to be able to use cv2 for creating animations.
 3. Compile the `mandelbrot.pyx` file with `python setup.py build_ext --inplace`
 4. Run `mandelbrot.py`. For MPI parallelization use `mpiexec -n nthreads python mandelbrot.py` where `nthreads` is the number of cores. For hyperthreading, specify the `mpiexec -n nthreads --use-hwthread-cpus python mandelbrot.py` argument. This will create all the frames.
 5. Run `animate.py` to put the frames together for a video.
