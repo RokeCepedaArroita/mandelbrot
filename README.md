@@ -65,7 +65,7 @@ Here is an examples of the output of the demo:
 
 This coordinate is known as the "Mandelbrot Island", and is located near the center of the set. Zooming in on this point will reveal a fascinating pattern of smaller islands and filaments, each with their own unique shapes and structures. Below is an example of a zooming animation created with this code:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u3YDqfdpvvk" frameborder="0" allowfullscreen></iframe>
+[![Zooming Animation](https://img.youtube.com/vi/u3YDqfdpvvk/0.jpg)](https://www.youtube.com/watch?v=u3YDqfdpvvk)
 
 ## Troubleshooting
 
