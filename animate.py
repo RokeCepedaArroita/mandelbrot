@@ -9,7 +9,8 @@ video_name = 'mandelbrot_animation'
 fps = 60
 
 # Define the codec for the output video (can be changed based on the desired output format)
-fourcc = cv2.VideoWriter_fourcc(*'H264')
+# Note that you might have to conda install -c conda-forge openh264 to use the H264 format
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 
 # Set the size of the output video (must match the size of your frames)
 frame_size = (3840, 2160)

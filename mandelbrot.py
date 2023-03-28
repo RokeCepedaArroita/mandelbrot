@@ -99,6 +99,9 @@ for frame in framelist:
     # and figsize are set so that the original resolution is preserved at 4K.
     plt.savefig(f'./{folder_name}/mandelbrot_f{frame}.png', bbox_inches='tight', pad_inches=0, dpi=311.69)
 
+    # Close figure
+    plt.close()
+
     # Update the tqdm progress bar on rank 0
     if rank == 0:
         progress_bar.update(1*size)
