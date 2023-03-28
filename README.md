@@ -57,13 +57,15 @@ The code for this demo is written in Python and uses the Cython and MPI librarie
 - `colour_scales.py`: Contains two custom colour scales. You can add your own here.
 - `animate.py`: Contains the script to animate the frames and save them as a video.
 
-## Examples
+## Examples and Animation
 
 Here is an examples of the output of the demo:
 
 ![Mandelbrot Island](./examples/mandelbrot_f0.png)
 
-This coordinate is known as the "Mandelbrot Island", and is located near the center of the set. Zooming in on this point will reveal a fascinating pattern of smaller islands and filaments, each with their own unique shapes and structures.
+This coordinate is known as the "Mandelbrot Island", and is located near the center of the set. Zooming in on this point will reveal a fascinating pattern of smaller islands and filaments, each with their own unique shapes and structures. Below is an example of a zooming animation created with this code:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u3YDqfdpvvk" frameborder="0" allowfullscreen></iframe>
 
 ## Troubleshooting
 
